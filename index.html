@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT World</title>
+    <!-- font awosome css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <!-- owl carousel css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="nav-container nft-container">
+            <div class="nft-nav-logo">
+                <a nft-logo href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+            </div>
+            <!-- desktop menu  -->
+            <nav class="nft-nav-menu">
+                <ul class="nav-menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Why us</a></li>
+                    <li><a href="#">Market</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="search nft-sm-none">
+                    <span class="nav-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search....">
+                    </div>
+                </div>
+                <a class="nft-nav-btn" href="#"><i class="fa-solid fa-user"></i>Sign up now</a>
+            </nav>
+            <div class="nav-search-sm nft-lg-none nft-sm-block nft-flex">
+                <div class="search">
+                    <span class="nav-search-icon search-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <div class="search-container search-container-sm">
+                        <input type="text" placeholder="Search....">
+                    </div>
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="whyUs">
+        <div class=" nft-wu nft-container">
+            <div class="nft-wu-wrapper nft-row nft-sm-col-reverse">
+                <div class="wu-nft-left nft-col">
+                    <div class="wu-content">
+                        <h4><span class="wu-text-gradient-1">Why</span> Us ?<br>Discover, and collect<br><span
+                                class="wu-text-gradient-2">extraordinary</span></h4>
+                        <p>Marketplace for monster character collections non fungible token NFTs</p>
+                        <div class="btn-container nft-flex">
+                            <button class="wu-btn-1"><a href="#"><span><i class="fa-solid fa-rocket"></i></span>
+                                    Explore</button></a>
+                            <button class="wu-btn-2"><a href="#"><span><i
+                                            class="fa-solid fa-handshake-simple"></i></span> Join Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wu-nft-right nft-col">
+                    <div class="wu-nft-right-img-container">
+                        <img src="assets/images/ladyWithBooks.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="minting-proc">
+        <div class="nft-container">
+            <div class="nft-minting-wrapper nft-row">
+                <div class="nft-minting-left nft-col-40 nft-col">
+                    <div class="nft-minting-left-img">
+                        <img src="assets/images/mint-pro-left.png" alt="">
+                    </div>
+                </div>
+                <div class="nft-minting-rigth nft-col-70 nft-col">
+                    <div class="nft-maining-content">
+                        <p class="minting-header">Minting Process</p>
+                        <ul class="ul-outer">
+                            <li>
+                                <p>
+                                    Minting begins on May 1st 2022 and the minting price is 0.07 ETH.
+                                    Willy Wang believes in honesty, inclusion and fairness, and everyone will have an
+                                    equal
+                                    chance to mint any of the Willy Wang NFTs. Minting will occur randomly to avoid
+                                    someone
+                                    trying to obtain the rarest NFTs.
+
+                                    The identity of your Willy Wang NFT will remain a secret until the reveal takes
+                                    place at
+                                    5000 mints. There is no limit to how many Willy Wang NFTs you can mint.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="inner-p">105 ETH will be given away during the minting process</p>
+                                <ul class="ul-inner">
+                                    <li>105 ETH will be given away during the minting process</li>
+                                    <li>20 giveaways of 0.5 ETH</li>
+                                    <li>200 giveaways of 0.1 ETH </li>
+                                    <li>10 giveaways of 1 ETH</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="popular-nfts">
+        <div class="popular nft-container">
+            <div class="nft-row pop-wrapper">
+
+                <div class="owl-main owl-carousel owl-theme">
+
+                    <div class="popular-col">
+                        <div class="item">
+                            <div class="card-content">
+                                <div class="card-up">
+                                    <div class="card-likes">
+                                        <button class="likes-btn">
+                                            <span><i class=" like fa-regular fa-heart"></i></span>
+                                            <span class="likes-num">0</span>
+                                        </button>
+                                    </div>
+                                    <div class="card-bg-img"><a href="#"><img src="assets/images/ape-social.png" alt=""></a></div>
+                                    <div class="card-timer">
+                                        <span class="timer-icon"><i class="fa-solid fa-stopwatch"></i></span>
+                                        <span class="time days">00</span> :
+                                        <span class="time hours">00</span> :
+                                        <span class="time minutes">00</span> :
+                                        <span class="time seconds">00</span>
+                                    </div>
+                                </div>
+                                <div class="card-down">
+                                    <div class="name">
+                                        <div><a href="#">Ape Social Clu</a></div>
+                                        <div><span><a href="#">ETH</a></span></div>
+                                    </div>
+                                    <div class="creator-desc">
+                                        <div class="creator-profile"><a href="#"><img src="assets/images/ape-profile.png" alt=""></a></div>
+                                        <div class="desc">
+                                            <div class="desc-name"><a href="#">NFTenthusiast_dp</a></div>
+                                            <!-- <div class="desc-Eth">4.89 eTH</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-col">
+                        <div class="item">
+                            <div class="card-content">
+                                <div class="card-up">
+                                    <div class="card-likes">
+                                        <button class="likes-btn">
+                                            <span><i class=" like fa-regular fa-heart"></i></span>
+                                            <span class="likes-num">0</span>
+                                        </button>
+                                    </div>
+                                    <div class="card-bg-img"><a href="#"><img src="assets/images/trap.png" alt=""></a></div>
+                                    <div class="card-timer">
+                                        <span class="timer-icon"><i class="fa-solid fa-stopwatch"></i></span>
+                                        <span class="time days">00</span> :
+                                        <span class="time hours">00</span> :
+                                        <span class="time minutes">00</span> :
+                                        <span class="time seconds">00</span>
+                                    </div>
+                                </div>
+                                <div class="card-down">
+                                    <div class="name">
+                                        <div><a href="#">Traploper</a></div>
+                                        <div><span><a href="#">ETH</a></span></div>
+                                    </div>
+                                    <div class="creator-desc">
+                                        <div class="creator-profile"><a href="#"><img src="assets/images/ape-profile.png" alt=""></a></div>
+                                        <div class="desc">
+                                            <div class="desc-name"><a href="#">NFTenthusiast_dp</a></div>
+                                            <!-- <div class="desc-Eth">4.89 eTH</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-col">
+                        <div class="item">
+                            <div class="card-content">
+                                <div class="card-up">
+                                    <div class="card-likes">
+                                        <button class="likes-btn">
+                                            <span><i class=" like fa-regular fa-heart"></i></span>
+                                            <span class="likes-num">0</span>
+                                        </button>
+                                    </div>
+                                    <div class="card-bg-img"><a href="#"><img src="assets/images/crypto.png" alt=""></a></div>
+                                    <div class="card-timer">
+                                        <span class="timer-icon"><i class="fa-solid fa-stopwatch"></i></span>
+                                        <span class="time days">00</span> :
+                                        <span class="time hours">00</span> :
+                                        <span class="time minutes">00</span> :
+                                        <span class="time seconds">00</span>
+                                    </div>
+                                </div>
+                                <div class="card-down">
+                                    <div class="name">
+                                        <div><a href="#">CryptoDonkeys</a></div>
+                                        <div><span><a href="#">ETH</a></span></div>
+                                    </div>
+                                    <div class="creator-desc">
+                                        <div class="creator-profile"><a href="#"><img src="assets/images/ape-profile.png" alt=""></a></div>
+                                        <div class="desc">
+                                            <div class="desc-name"><a href="#">NFTenthusiast_dp</a></div>
+                                            <!-- <div class="desc-Eth">4.89 eTH</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-col">
+                        <div class="item">
+                            <div class="card-content">
+                                <div class="card-up">
+                                    <div class="card-likes">
+                                        <button class="likes-btn">
+                                            <span><i class=" like fa-regular fa-heart"></i></span>
+                                            <span class="likes-num">0</span>
+                                        </button>
+                                    </div>
+                                    <div class="card-bg-img"><a href="#"><img src="assets/images/invisi.png" alt=""></a></div>
+                                    <div class="card-timer">
+                                        <span class="timer-icon"><i class="fa-solid fa-stopwatch"></i></span>
+                                        <span class="time days">00</span> :
+                                        <span class="time hours">00</span> :
+                                        <span class="time minutes">00</span> :
+                                        <span class="time seconds">00</span>
+                                    </div>
+                                </div>
+                                <div class="card-down">
+                                    <div class="name">
+                                        <div><a href="#">InvisibleDoodle Club#3268</a></div>
+                                        <div><span><a href="#">ETH</a></span></div>
+                                    </div>
+                                    <div class="creator-desc">
+                                        <div class="creator-profile"><a href="#"><img src="assets/images/ape-profile.png" alt=""></a></div>
+                                        <div class="desc">
+                                            <div class="desc-name"><a href="#">NFTenthusiast_dp</a></div>
+                                            <!-- <div class="desc-Eth">4.89 eTH</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- jquery js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- owl Carousel js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- js  -->
+    <script src="assets/js/min.js"></script>
+</body>
+
+</html>
