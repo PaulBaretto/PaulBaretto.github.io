@@ -578,5 +578,14 @@ header {
   .card-bg-img{
     max-height: 390px;
 }
+.owl-nav button{
+    top: 0;
+}
+.owl-nav .owl-prev{
+    left: 0;
+}
+.owl-nav .owl-next{
+    right: 0;
+}
 
 }
