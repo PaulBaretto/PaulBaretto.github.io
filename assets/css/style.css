@@ -590,9 +590,12 @@ header {
 .owl-main .owl-dots{
     position: relative;
     top: 60px;
+    max-width: 200px;
+    margin-inline: auto;
 }
 .owl-main .owl-dots .owl-dot span{
     height: 30px;
+
 }
 
 }
