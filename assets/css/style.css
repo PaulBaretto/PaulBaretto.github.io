@@ -587,5 +587,12 @@ header {
 .owl-nav .owl-next{
     right: 0;
 }
+.owl-main .owl-dots{
+    position: relative;
+    top: 60px;
+}
+.owl-main .owl-dots .owl-dot span{
+    height: 30px;
+}
 
 }
