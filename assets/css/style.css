@@ -444,10 +444,12 @@ header {
     display: flex;
     gap: 10px;
     cursor: pointer;
+    transition: .2s linear;
+
 }
 .creator-desc:hover{
     color: #ffffff70;
-    filter: opacity(0.5);
+    filter: opacity(0.8);
 }
 
 .creator-profile {
@@ -457,7 +459,6 @@ header {
 .creator-profile img {
     width: 100%;
     border-radius: 16px;
-    transition: .2s linear;
 }
 
 
@@ -476,7 +477,6 @@ header {
     >a {
         color: #EBEBEB;
         text-decoration: none;
-        transition: .2s linear;
     }
 }
 
@@ -543,7 +543,7 @@ header {
     bottom: 0;
     left: 0;
     transform: translateY(101%);
-    transition: 0.5s linear;
+    transition: .3s linear;
     /* opacity: 0; */
     background: var(--brand-color);
     z-index: -1;
