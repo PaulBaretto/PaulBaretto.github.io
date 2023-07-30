@@ -1,12 +1,12 @@
 
 
 
-// adding a class in nav 
+// slideIn navbar 
 function toggleMenu() {
   var nav = document.querySelector('.nft-nav-menu');
   // add or remove class
-  nav.classList.toggle('nft-nav-show');
-}
+  nav.classList.toggle('nft-nav-show')
+};
 
 
 // nav search desktop
@@ -14,59 +14,53 @@ var navSearchOpen = document.querySelector('.nav-search-icon');
 navSearchOpen.addEventListener('click', () => {
   var searchbox = document.querySelector('.search-container')
   searchbox.classList.toggle('nft-Search-show')
-})
+});
 // nav search mobile
 var navSearchOpen = document.querySelector('.search-sm');
 navSearchOpen.addEventListener('click', () => {
   var searchbox = document.querySelector('.search-container-sm')
   searchbox.classList.toggle('nft-Search-show')
-})
-
-
-// card like btn 
-var likeBtn = document.querySelector('.likes-btn');
-likeBtn.addEventListener('click', () => {
-  var like = document.querySelector('.like');
-  like.classList.toggle('bg-red');
 });
 
 
-// var likeBtn = document.querySelector('.likes-btn');
+// card like btn 
+let test1 = document.querySelectorAll('.likes-btn');
 
-// likeBtn.addEventListener('click', (event) =>{
-//   var like = document.querySelector('.like');
-//   like.classList.toggle('bg-red');
-// } )
-
-
-
-
+  test1.forEach(test2 => {
+    test2.addEventListener('click', () => {
+    let like = test2.querySelector('.like');
+    like.classList.toggle('bg-red');
+});
+})
 
 
 // card watch 
 function updateTime() {
-  var now = new Date();
+  let now = new Date();
 
-  var days = now.getUTCDate() - 1; // Subtract 1 as getUTCDate() returns day of the month
-  var hours = now.getUTCHours();
-  var minutes = now.getUTCMinutes();
-  var seconds = now.getUTCSeconds();
+  let days = now.getUTCDate() + 1 ; // added 1 as getUTCDate() returns day of the month
+  let hours = now.getUTCHours();
+  let minutes = now.getUTCMinutes();
+  let seconds = now.getUTCSeconds();
 
-  document.querySelector('.card-timer .days').textContent = days.toString().padStart(2, '0');
-  document.querySelector('.card-timer .hours').textContent = hours.toString().padStart(2, '0');
-  document.querySelector('.card-timer .minutes').textContent = minutes.toString().padStart(2, '0');
-  document.querySelector('.card-timer .seconds').textContent = seconds.toString().padStart(2, '0');
+  let cardTimer = document.querySelectorAll('.card-timer');
+  cardTimer.forEach(timer => {
+       timer.querySelector('.card-timer .days').textContent = days.toString().padStart(2, '0');
+       timer.querySelector('.card-timer .hours').textContent = hours.toString().padStart(2, '0');
+       timer.querySelector('.card-timer .minutes').textContent = minutes.toString().padStart(2, '0');
+       timer.querySelector('.card-timer .seconds').textContent = seconds.toString().padStart(2, '0');
+});
+
 }
 // Update the time every second
 setInterval(updateTime, 1000);
 
 
 
-// owl carousel ini
-
-var nftOwl = jQuery(".owl-main")
+// owl carousel 
+let nftOwl = jQuery(".owl-main")
 nftOwl.owlCarousel({
-   navText: ["<img src='https://stfrancisxaviers.in/intern/paul/random-stuff/nft-world/assets/images/prev.png'>", "<img src='https://stfrancisxaviers.in/intern/paul/random-stuff/nft-world/assets/images/next.png'>"],
+   navText: ["<img src='assets/images/prev.png'>", "<img src='assets/images/next.png'>"],
   items: 4,
   loop: true,
   margin: 15,
@@ -90,12 +84,24 @@ nftOwl.owlCarousel({
 
     }
   }
-})
+});
 
 
 
+// accordion open/close
+let accordions = document.querySelectorAll('.accordion');
 
+  accordions.forEach(accordion => {
+    accordion.addEventListener('click', e =>{
+    let accordionBtn = accordion.querySelector('.accordionbtn');
+    accordion.classList.toggle('active');
+    accordionBtn.classList.toggle('rotate');
 
-  // let owl_dots = document.querySelector('.owl-main .owl-dots');
-  // owl_dots.style.cssText = 'display:black;';
-  // owl_dots.classList.remove('disabled');
+    // close the unActive accordion  
+    // accordions.forEach(otherAccordion => {
+    //   if(otherAccordion !== accordion){
+    //     otherAccordion.querySelector('.accondion').classList.remove('active');
+    //   }
+    // });
+    });
+  });
