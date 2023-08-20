@@ -64,7 +64,6 @@ nftOwl.owlCarousel({
   items: 4,
   loop: true,
   margin: 15,
-  // dots: true,
   nav:true,
   responsiveClass: true,
   responsive: {
@@ -87,21 +86,21 @@ nftOwl.owlCarousel({
 });
 
 
-
-// accordion open/close
 let accordions = document.querySelectorAll('.accordion');
 
   accordions.forEach(accordion => {
-    accordion.addEventListener('click', e =>{
-    let accordionBtn = accordion.querySelector('.accordionbtn');
-    accordion.classList.toggle('active');
-    accordionBtn.classList.toggle('rotate');
+    accordion.addEventListener('click', () => {
+     
+      let accordionBtn = accordion.querySelector('.accordionbtn');
+          accordionBtn.classList.toggle('rotate');
+     
+     accordion.classList.toggle('active');  
 
-    // close the unActive accordion  
-    // accordions.forEach(otherAccordion => {
-    //   if(otherAccordion !== accordion){
-    //     otherAccordion.querySelector('.accondion').classList.remove('active');
-    //   }
-    // });
-    });
+     accordions.forEach(function(unActiveItem) {
+      if (unActiveItem !== accordion) {
+        unActiveItem.classList.remove('active');
+      }
+     })
+
+    })
   });

@@ -367,6 +367,7 @@ header {
     position: absolute;
     top: 15px;
     right: 10px;
+    z-index: 1;
 }
 
 .card-likes .bg-red {
@@ -387,12 +388,20 @@ header {
 }
 
 .card-bg-img {
-    max-height: 250px;
+    min-height: 305px;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .card-bg-img img {
     max-width: 100%;
     width: 100%;
+    transition: 0.3s linear;
+}
+.card-content:hover .card-bg-img img{
+    transform: translate(10% ,0);
+    scale: 1.6;
+    filter: grayscale(1);
 }
 
 .card-timer {
@@ -519,7 +528,7 @@ header {
 }
 
 .owl-nav img {
-    filter: opacity(0.5);
+    filter: opacity(0.8);
     transition: .2s linear;
 }
 
@@ -540,6 +549,14 @@ header {
 .owl-main .owl-dots .owl-dot span {
     height: 10px;
     width: 30px;
+}
+.popular-nfts .owl-theme .owl-dots .owl-dot span{
+    /* background: #5142FC; */
+    background: #a050e665;
+}
+.popular-nfts .owl-theme .owl-dots .owl-dot.active span{
+    /* background: #5242fc8b; */
+    background: #a050e6fe;
 }
 
 
@@ -589,6 +606,9 @@ header {
 }
 
 /* faq  */
+.faq .nft-row{
+    align-items: center;
+}
 .faq .img-border {
     position: relative;
 }
@@ -624,7 +644,9 @@ header {
 .accordion-wrap {
     padding: 2rem;
 }
-
+.accordion{
+    overflow: hidden;
+}
 .accordion-header,
 .accordion-content {
     padding: 16px;
@@ -681,10 +703,14 @@ span.rotate {
 }
 
 .accordion-content {
+    position: relative;
+    z-index: -1;
     background: var(--brand-color);
-    display: none;
-    transition: display-block .3s;
+    transition: .3s;
+    transform: translateY(-100%);
     padding-left: 45px;
+    height: 0;
+    filter: opacity(0);
 }
 
 .accordion-content p {
@@ -693,7 +719,11 @@ span.rotate {
 }
 
 .accordion.active .accordion-content {
-    display: block;
+    transform: translateY(0);
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    filter: opacity(1);
 }
 
 /* footer  */
