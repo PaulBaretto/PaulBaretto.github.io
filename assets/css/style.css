@@ -1,3 +1,5 @@
+
+
 /* global css start  */
 .nft-container {
     max-width: 1020px;
@@ -47,10 +49,10 @@
     font-family: inherit;
     font-weight: 700;
     font-size: 40px;
-    color: #fff;
+    color: var(--text-color);
+    transition: var(--transition);
     margin: 0 0 30px;
 }
-
 .text-center {
     text-align: center;
 }
@@ -60,20 +62,30 @@ a {
     text-decoration: none;
 }
 
-:root {
+
+body {
+    background: var(--background);
+    color: #fff;
+    font-family: 'Sofia Sans', sans-serif;
+    margin: 0;
+    transition: background-color 0.2s linear;
+    /* variables  */
     --brand-color: linear-gradient(220deg, #A150E6 0%, #6E50E6 100%);
     --border-color: #A150E6;
     --sofia: 'Sofia Sans', sans-serif;
+    --text-color:#fff;
+    --background:#000;
+    --transition:0.2s linear;
+    --scroll-bar:#000;
 }
-
-body {
-    background-color: black;
-    color: #fff;
-    font-family: 'Sofia Sans', sans-serif;
+body.morning{
+    --text-color:#000;
+    --background:#fff;
+    --scroll-bar:#000;
 }
-
 ::-webkit-scrollbar {
     width: 10px;
+    background: var(--scroll-bar);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -81,12 +93,17 @@ body {
     border-radius: 5px;
 }
 
-
-
 header {
-    position: relative;
+    /* position: relative; */
+    /* background: #000; */
+    position: fixed;
+    background: #0000009c;
+    backdrop-filter:blur(5px);
+    padding-block: 11px;
+    width: 100%;
+    top: 0;
+    z-index: 3;
 }
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -191,6 +208,84 @@ header {
     display: none;
 }
 
+.toggle-container{
+    position: relative;
+    width: 85px;
+    height: 45px;
+    border-radius: 50px;
+}
+.toggle{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit;
+    padding-inline: 7px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-image: url('../images/night-bg.png');
+    background-size: inherit;
+    transition: 0.3s linear;
+}
+.morning .toggle{
+    background-image: url('../images/day-bg.png');
+    background-size: inherit;
+    background-position: center;
+}
+.roll-btn{
+    position: absolute;
+    display: block;
+    filter: brightness(0.5);
+    border-radius: 50%;
+    width: 40%;
+    height: 35px;
+    z-index: 1;
+    transition: 0.5s linear;
+    transform: translateX(0);
+}
+.morning .roll-btn{
+    transform: translateX(100%);
+    filter: brightness(1);
+}
+.roll-btn img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.day,
+.night{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 90%;
+    > i {
+        font-size: 22px;
+        transform: rotateZ(220deg);
+    }   
+}
+.day{
+    color: #ffb100;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: 0.3s linear;
+}
+.morning .day{
+    transition: 0.3s linear;
+    opacity: 1;
+}
+.night{
+    color: #FFED08;
+    transition: 0.3s linear;
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+.morning .night{
+    transition: 0.3s linear;
+    opacity: 0;
+}
 
 /* why us section  */
 
@@ -198,7 +293,6 @@ header {
 .nft-wu-wrapper {
     width: 100%;
 }
-
 .wu-content {
     font-family: 'Sofia Sans', sans-serif;
 }
@@ -208,8 +302,9 @@ header {
     font-weight: 600;
     font-size: 55px;
     margin: 0;
+    color: var(--text-color);
+    transition: var(--transition);
 }
-
 .wu-text-gradient-1 {
     background: linear-gradient(to bottom, #E250E5, #4B50E6);
     -webkit-background-clip: text;
@@ -224,15 +319,19 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
 }
+.morning .wu-text-gradient-2{
+    text-shadow: 0 0 0px #E250E5, 0 0 0px #4B50E6, 0 0 5px #4B50E6;
+
+}
 
 .wu-content>p {
     font-family: inherit;
     font-weight: 400;
-    color: #EBEBEB;
     font-size: 18px;
     padding-bottom: 15px;
+    color: var(--text-color);
+    transition: var(--transition);
 }
-
 .btn-container {
     gap: 35px;
 }
@@ -246,18 +345,20 @@ header {
     cursor: pointer;
 
     >a {
-        color: #fff;
+        color: var(--text-color);
+        transition: var(--transition);
         text-decoration: none;
     }
 }
-
 .wu-content .wu-btn-2 {
     color: #343444;
     font-size: 18px;
     padding: 15px 35px;
     border-radius: 50px;
+    border: 1px solid transparent;
     background-color: #fff;
     cursor: pointer;
+    transition: var(--transition);
 
     >a span {
         color: #5142FC;
@@ -268,7 +369,9 @@ header {
         text-decoration: none;
     }
 }
-
+.morning .wu-content .wu-btn-2{
+    border: 1px solid #000;
+}
 .wu-nft-right-img-container {
     position: relative;
     display: grid;
@@ -316,12 +419,13 @@ header {
         color: #DEDEDE;
     }
 }
-
+.morning .nft-maining-content .ul-outer li p{
+    color: #000;
+}
 .nft-maining-content .ul-outer .inner-p {
-    color: #fff;
+    color: var(--text-color);
     font-size: 25px;
 }
-
 .nft-maining-content .ul-inner {
     padding-left: 25px;
     display: grid;
@@ -335,7 +439,9 @@ header {
         font-weight: 400;
     }
 }
-
+.morning .nft-maining-content .ul-inner li{
+    color: #000;
+}
 /* popular  */
 
 .pop-wrapper {
@@ -353,9 +459,14 @@ header {
     transition: .2s linear;
     min-height: 370px;
 }
-
 .card-content:hover {
-    border-color: #ffffff;
+    border-color: #ffffffd4 ;
+}
+.morning .card-content{
+    border-color: #44444470;
+}
+.morning .card-content:hover{
+    border-color: #000000c2;
 }
 
 .card-up {
@@ -403,7 +514,9 @@ header {
     scale: 1.6;
     filter: grayscale(1);
 }
-
+.morning .card-content:hover .card-bg-img img{
+    filter: grayscale(0);
+}
 .card-timer {
     position: absolute;
     bottom: 5px;
@@ -436,11 +549,13 @@ header {
 }
 
 .card-down .name div a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     transition: .2s linear;
 }
-
+.morning .card-down .name div span a{
+    color: #fff;
+}
 
 .card-down .name span {
     background: #5142FC;
@@ -451,11 +566,11 @@ header {
     transition: .2s linear;
 
     >a {
-        color: #fff;
+        color: var(--text-color);
+        transition: var(--transition);
         text-decoration: none;
     }
 }
-
 .card-down .name span:hover {
     background-color: #5142fc8a;
 }
@@ -471,8 +586,14 @@ header {
 .creator-desc:hover {
     color: #ffffff70;
     filter: opacity(0.8);
+    transition: var(--transition);
 }
-
+.morning .creator-desc{
+    color: #000;
+}
+.morning .creator-desc:hover{
+    filter: opacity(1);
+}
 .creator-profile {
     width: 50px;
 }
@@ -497,10 +618,13 @@ header {
 
     >a {
         color: #EBEBEB;
+        transition: var(--transition);
         text-decoration: none;
     }
 }
-
+.morning .desc .desc-name a{
+    color: #000;
+}
 
 .owl-nav {
 
@@ -587,24 +711,38 @@ header {
     box-shadow: 0px 0px 20px 2px rebeccapurple;
     transform: translateY(0);
 }
-
 .ser-wrap h4 {
     font-size: 20px;
     font-weight: 600;
+    transition: var(--transition);
+    color: var(--text-color);
 }
 
 .ser-wrap p {
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
+    color: var(--text-color);
+    transition: var(--transition);
 }
-
+.morning .ser-wrap:hover h4,
+.morning .ser-wrap:hover p{
+    color: #fff;
+}
 /* sponsors */
 .sponsors .logos,
 .logos img {
     max-width: 100%;
 }
-
+.morning .sponsors{
+    background: #000;
+    padding-bottom: 35px;
+}
+.morning .sponsors .nft-titles {
+    transition: var(--transition);
+    color: #fff;
+    padding-top: 10px;
+}
 /* faq  */
 .faq .nft-row{
     align-items: center;
@@ -727,6 +865,13 @@ span.rotate {
 }
 
 /* footer  */
+footer{
+    background: #000;
+    padding-top: 10px;
+}
+.morning footer{
+    background: #000;
+}
 .footer-logo-icons {
     display: flex;
     flex-direction: column;
@@ -912,7 +1057,7 @@ span.rotate {
         position: fixed;
         top: 85px;
         width: 85vw;
-        height: 100%;
+        height: 100vh;
         left: -85vw;
         background: #6A1AB7;
         transition: .3s linear;
@@ -922,13 +1067,17 @@ span.rotate {
     .nft-nav-show {
         left: 0;
         display: block;
+        display: grid;
+        align-items: center;
     }
-
     .nav-menu-list {
         padding: 0;
         display: block;
+        height: 100%;
+        display: grid;
+        padding-top: 40px;
     }
-
+   
     .nav-menu-list li {
         margin-bottom: 15px;
     }
@@ -939,6 +1088,24 @@ span.rotate {
         width: 70%;
         margin-inline: auto;
     }
+.sm-sign-up{
+    height: 100%;
+    display: grid;
+    align-items: end;
+}
+.toggle-box-sm{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 18px;
+    align-items: center;
+}
+.toggle-box-sm p{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    font-family: var(--sofia);
+    transition: var(--transition);
+}
 
     .wu-nft-right-img-container {
         padding-block: 20px;
