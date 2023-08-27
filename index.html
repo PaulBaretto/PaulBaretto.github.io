@@ -22,10 +22,46 @@
 
     <!-- css  -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        function showLoader(){
+            let loader = document.querySelector('.loading');
+            loader.style.display = 'block';
+        }
+        function hideLoader(){
+            let loader = document.querySelector('.loading');
+            let bodyWrapper = document.querySelector('main');
+            loader.style.display = 'none';
+            bodyWrapper.style.display = 'block';
+            }
+            
+            document.addEventListener('DOMContentLoaded', loadONStart);
+            function loadONStart(){
+                showLoader();
+
+                setTimeout( function() {
+                    hideLoader();
+
+                }, 1000);
+            }
+            // window.onload
+    </script>
 </head>
 
 <body>
-<main>
+    <div class="loading">
+        <div class="wrapper">
+            <div class="loading-group">
+               <div class="loader"> <span class="loading-items item1" style="--d:200ms;"></span> </div>  
+               <div class="loader"> <span class="loading-items item2" style="--d:400ms;"></span> </div>  
+               <div class="loader"> <span class="loading-items item3" style="--d:600ms;"></span> </div>  
+               <div class="loader"> <span class="loading-items item4" style="--d:800ms;"></span> </div>  
+               <div class="loader"> <span class="loading-items item5" style="--d:1000ms"></span> </div>  
+            </div>
+          <p class="loadingtext">Web On The Way...</p>
+        </div>
+    </div>
+
+    <main>     
 
     <header class="header">
         <div class="nav-container nft-container">
@@ -34,6 +70,9 @@
             </div>
             <!-- desktop menu  -->
             <nav class="nft-nav-menu">
+                <div class="nft-nav-logo nft-lg-none">
+                    <a nft-logo href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+                </div>
                 <ul class="nav-menu-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Why us</a></li>
@@ -49,14 +88,15 @@
                 <div class="sm-sign-up">
                     <a class="nft-nav-btn" href="#"><i class="fa-solid fa-user"></i>Sign up now</a>
                 </div>
-                <div class="toggle-container nft-sm-none">
-                    <button class="toggle ">
-                        <span class="day"><i class="fa-solid fa-sun"></i></span>
-                        <span class="roll-btn"><img src="assets/images/earth-bg.png" alt="Earth"></span>
-                        <span class="night"><i class="fa-solid fa-moon"></i></span>
-                    </button>
-                </div>
-                <div class="toggle-box-sm nft-lg-none nft-sm-block">
+                    <div class="toggle-container nft-sm-none">
+                        <button class="toggle ">
+                            <span class="day"><i class="fa-solid fa-sun"></i></span>
+                            <span class="roll-btn"><img src="assets/images/earth-bg.png" alt="Earth"></span>
+                            <span class="night"><i class="fa-solid fa-moon"></i></span>
+                        </button>
+                    </div>
+                <!-- mobile theme dark/light -->
+                <div class="toggle-box-sm  nft-lg-none nft-sm-block">
                     <div class="toggle-update"><p>Dark</p></div>
                     <div class="toggle-container">
                         <button class="toggle ">
@@ -67,7 +107,7 @@
                     </div>
                 </div>
             </nav>
-            <!-- mobile menu  -->
+            <!-- mobile search  -->
             <div class="nav-search-sm nft-lg-none nft-sm-block nft-flex">
                 <div class="search">
                     <span class="nav-search-icon search-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -498,10 +538,7 @@
 
     <!-- js  -->
     <script src="assets/js/min.js"></script>
- 
-    <!-- 
-        figma file:  https://www.figma.com/file/YDAxepp6bX3aAQpyYdQO4P/NFT-World-Landing-page?type=design&node-id=801%3A2684&mode=dev
-     -->
+
 
 </body>
 </html>
