@@ -11,6 +11,7 @@ function toggleMenu() {
          body.addEventListener('click', () => {
            if(nav.classList.contains ('nft-nav-show')){
             body.style.cssText = 'overflow:hidden';
+            // nav.classList.remove('nft-nav-show')
           } else{
              body.style.cssText = 'overflow:auto';
            }
@@ -30,22 +31,35 @@ navSearchOpen.addEventListener('click', () => {
   });
 
 });
+
 // nav search mobile
 var navSearchOpen = document.querySelector('.search-sm');
 navSearchOpen.addEventListener('click', () => {
   var searchbox = document.querySelector('.search-container-sm')
   searchbox.classList.toggle('nft-Search-show')
+
+  // window.addEventListener('scroll', () => {
+  //   if (searchbox.classList.contains('nft-Search-show')) {
+  //       searchbox.classList.remove('nft-Search-show');
+  //   }
+  
 });
 
-// light/dark mode toggler  start
+// light/dark mode toggler  
 let toggleBtn = document.querySelectorAll('.toggle');
+let modeText = document.querySelector('.toggle-update p');
 
-  toggleBtn.forEach(changeBg => {
+  toggleBtn.forEach(changeBg => { 
       changeBg.addEventListener('click', () => {
       let bodyTag = document.querySelector('body');
       bodyTag.classList.toggle('morning');
+      if (bodyTag.classList.contains('morning')){
+            modeText.innerHTML = 'Light';
+      } else {
+        modeText.innerHTML = 'Dark';
+      }
     });
-    });
+    })
 
 // card like btn 
 let test1 = document.querySelectorAll('.likes-btn');
