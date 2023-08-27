@@ -3,11 +3,12 @@
 
 ###
 
-<div align="start">
-<a href ="https://www.figma.com/file/YDAxepp6bX3aAQpyYdQO4P/NFT-World-Landing-page?type=design&node-id=801%3A2684&mode=dev">
+
+
 <h3> Figma file </h3>
-</a>
-</div>
+ <a href="https://www.figma.com/file/YDAxepp6bX3aAQpyYdQO4P/NFT-World-Landing-page?type=design&node-id=801%3A2684&mode=dev" target="_blank">
+    <img class="logoimg" src="https://cdn.worldvectorlogo.com/logos/figma-5.svg" height="35" alt="figma logo"  />
+  </a>
 
 ### 
 <br>
