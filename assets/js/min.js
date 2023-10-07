@@ -1,11 +1,15 @@
 
+let footerLoge = document.querySelector('.footer_logo');
 
 
 // slideIn navbar 
 function toggleMenu() {
-  var nav = document.querySelector('.nft-nav-menu');
+  let nav = document.querySelector('.nft-nav-menu');
+  let toCloseNavDIv = document.querySelector('.to-close-nav-div');
+  
   // add or remove class
      nav.classList.toggle('nft-nav-show')
+     toCloseNavDIv.classList.toggle('nft-nav-show-for-div')
 
      let body = document.querySelector('body');
          body.addEventListener('click', () => {
@@ -16,6 +20,11 @@ function toggleMenu() {
              body.style.cssText = 'overflow:auto';
            }
          })
+      
+      toCloseNavDIv.addEventListener('click', () => {
+        toCloseNavDIv.classList.remove('nft-nav-show-for-div');
+        nav.classList.remove('nft-nav-show')
+      })
 };
 
 // nav search desktop
@@ -62,15 +71,22 @@ let modeText = document.querySelector('.toggle-update p');
     })
 
 // card like btn 
-let test1 = document.querySelectorAll('.likes-btn');
+let likesBtns = document.querySelectorAll('.likes-btn');
 
-  test1.forEach(test2 => {
-    test2.addEventListener('click', () => {
-    let like = test2.querySelector('.like');
+  likesBtns.forEach(likeBtn => {
+    likeBtn.addEventListener('click', () => {
+      let like = likeBtn.querySelector('.like');
     like.classList.toggle('bg-red');
+    
+    let likeNums = likeBtn.querySelectorAll('.likes-num');
+    likeNums.forEach(likeNum => {
+      for(i = 0; i <= 1; i++){
+        likeNum.textContent = i;
+      }
+    })
+
 });
 })
-
 
 // card watch 
 function updateTime() {
@@ -142,3 +158,20 @@ let accordions = document.querySelectorAll('.accordion');
 
     })
   });
+
+
+  footerLoge.addEventListener('click', () => {
+    let PromtText = prompt('Your Name:-')
+        for(i = 0; i <= Infinity; i++){
+          console.log(`
+          if(password === ${PromtText}){
+            console.log('testing')
+          }
+          Visit https://github.com/PaulBaretto
+          `)
+          let title = document.querySelector('title');
+          title.textContent = `Server Error ${PromtText} be patience`;
+          alert('Server Error')
+    }
+  })
+  
