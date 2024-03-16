@@ -3,14 +3,21 @@
 
 ###
 
+<h3> Site link </h3>
+ <a href="https://paulbaretto.github.io/nft-world" target="_blank">
+    <img class="logoimg" src="https://i.imgur.com/UfdlsyP.png" height="35" alt="Website logo"  />
+  </a>
 
-
+### 
 <h3> Figma file </h3>
  <a href="https://www.figma.com/file/YDAxepp6bX3aAQpyYdQO4P/NFT-World-Landing-page?type=design&node-id=801%3A2684&mode=dev" target="_blank">
     <img class="logoimg" src="https://cdn.worldvectorlogo.com/logos/figma-5.svg" height="35" alt="figma logo"  />
   </a>
 
+
+
 ### 
+
 <br>
 
 <div align="center" border-radius="10">
